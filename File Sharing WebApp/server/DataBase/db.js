@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import dotenv from 'dotenv';
 dotenv.config();
 
-const dbApi = process.env.MONGODB_URI;
+const dbApi = process.env.MONGODB_URI || 'mongodb://localhost:27017/filesharing';
 
 const connectToDatabase = async () => {
   try {
